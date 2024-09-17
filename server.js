@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 
 // Define a route to act as a proxy to the Reddit API
-app.get('/', async (req, res) => {
+app.get('/api/reddit', async (req, res) => {
   try {
     // Make a request to Reddit API
     const response = await axios.get('https://www.reddit.com/r/Angular2.json');
